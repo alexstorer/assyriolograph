@@ -37,7 +37,7 @@ for row in dr:
         #print "Writer: ", writer, "from row", row
     d["rank"] = row["rank"]
     try:
-        d["rankname"] = unidecode(unicode(row["rankname"],encoding='utf-8')).split()[0].replace('?','')
+        d["rankname"] = unidecode(unicode(row["rankname"],encoding='utf-8')).split()[0].replace('?','') + unidecode(unicode(row["family"],encoding='utf-8'))        
         d["samples"] = row["samples"]
         d["family"] = row["family"]
         allrecords.append(d)
